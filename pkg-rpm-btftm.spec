@@ -17,7 +17,7 @@ URL:            https://example.com/mypackage
 # Source0's filename must match the entry in `sources`. On a cache miss the
 # build downloads this URL, so keep it pointing at a fetchable upstream tarball.
 # %{name} and %{version} are expanded, so bumping Version: is usually all you need.
-Source0:        https://example.com/mypackage/releases/%{name}-%{version}.tar.gz
+Source0:        https://qartifactory-edge.qualcomm.com/ui/native/qsc_releases/software/chip/component/bt-performant.qclinux.0.0/260604/prebuilt_resolute/btftm_1.0.2_arm64.tar.gz
 
 BuildRequires:  gcc
 BuildRequires:  make
