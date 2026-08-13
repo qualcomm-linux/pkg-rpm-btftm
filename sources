@@ -19,4 +19,4 @@
 # lookaside cache by this checksum; on a miss it downloads the matching
 # Source URL from your spec, verifies this checksum, and caches it back.
 #
-SHA512 (btftm_1.0.2_arm64.tar.gz) = REPLACE_ME_WITH_THE_REAL_SHA512_OF_YOUR_TARBALL
+SHA512 (btftm_1.0.2_arm64.tar.gz) = e6bdd839938dfd46406110bd7559e8bf15a704326874178a0c5f93761332d36e1f2fa8117468849dd1e08e55cf3e3cb1c5764c3ac02206ac0cbb4feb0409798e

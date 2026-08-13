@@ -1,19 +1,10 @@
-# Example RPM spec file.
-#
-# Rename this to <your-component>.spec and edit the fields below:
-#
-#   git mv mypackage.spec.example mycomponent.spec
-#
-# The workflows expect exactly ONE *.spec at the repo root, which is why this
-# ships with a .example suffix — it stays invisible to the build until renamed.
-#
-Name:           mypackage
-Version:        1.0
+Name:           btftm
+Version:        1.0.2
 Release:        1%{?dist}
 Summary:        One-line summary of the package
 
 License:        BSD-3-Clause
-URL:            https://example.com/mypackage
+URL:            https://qartifactory-edge.qualcomm.com
 # Source0's filename must match the entry in `sources`. On a cache miss the
 # build downloads this URL, so keep it pointing at a fetchable upstream tarball.
 # %{name} and %{version} are expanded, so bumping Version: is usually all you need.
@@ -23,23 +14,24 @@ BuildRequires:  gcc
 BuildRequires:  make
 
 %description
-A longer description of the package.
+btftm rmp generate
 
 %prep
-%autosetup
+%autosetup -p1 -n data
 
 %build
-%configure
-%make_build
+# Prebuilt binaries — no compilation step required.
 
 %install
-%make_install
+install -d %{buildroot}%{_libdir}/bin
+cp -a btdaig/arm64/usr/bin/. %{buildroot}%{_libdir}/bin/
 
 %files
+{_libdir}/bin
 %license LICENSE
 %doc README.md
 %{_bindir}/mypackage
 
 %changelog
-* Mon Jun 29 2026 Maintainer <maintainer@example.com> - 1.0-1
+* Mon Aug 13 2026 geyi <geyi@qti.qualcomm.com> - 1.0.2-1
 - Initial package
