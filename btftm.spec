@@ -29,6 +29,8 @@ install -m 0644 btftmdaemon/arm64/usr/share/doc/btftmdaemon/changelog.gz \
 %files
 %doc %{_docdir}/btftmdaemon/changelog.gz
 %{_bindir}/btftmdaemon
+%license LICENSE.qcom-2
+%license NOTICE
 
 %changelog
 * Mon Aug 25 2026 geyi <geyi@qti.qualcomm.com> - 1.0.3-1
