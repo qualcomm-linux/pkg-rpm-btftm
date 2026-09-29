@@ -1,12 +1,14 @@
 %global debug_package %{nil}
 Name:           btftm
 Version:        1.0.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Qualcomm Bluetooth firmware test and management binary
 License:        Qualcomm.nologin.binaries.license
 URL:            https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software/chip/component/bt-performant.qclinux.0.0
 Source0:        https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software/chip/component/bt-performant.qclinux.0.0/260821/prebuilt_resolute/%{name}_%{version}_arm64.tar.gz
 ExclusiveArch:  aarch64
+
+Requires:       qcom-libdiag
 
 %description
 btftm is a prebuilt Qualcomm Bluetooth firmware test and management
@@ -33,5 +35,8 @@ install -m 0644 btftmdaemon/arm64/usr/share/doc/btftmdaemon/changelog.gz \
 %license NOTICE
 
 %changelog
+* Tue Sep 29 2026 Xiuzhuo Shang <xiuzhuo.shang@oss.qualcomm.com> - 1.0.3-2
+- Declare Requires: qcom-libdiag.
+
 * Mon Aug 25 2026 geyi <geyi@qti.qualcomm.com> - 1.0.3-1
 - Initial RPM packaging of btftm prebuilt binary
