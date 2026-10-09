@@ -62,7 +62,7 @@ debugging:
 
 pkg-rpm-btftm is licensed under the
 [BSD-3-Clause License](https://spdx.org/licenses/BSD-3-Clause.html). See
-[LICENSE.txt](https://github.com/qualcomm-linux/pkg-rpm-btftm/blob/main/LICENSE.txt)
+[LICENSE.txt](LICENSE.txt)
 for the full license text. The packaged `btftmdaemon` binary itself ships
 under Qualcomm's binary license — see `LICENSE.qcom-2` and `NOTICE` in the
 installed package.
